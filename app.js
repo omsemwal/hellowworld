@@ -18,7 +18,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // Route for home page
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index.ejs");
 });
 
 // Route for summarizing short text
