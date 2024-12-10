@@ -38,7 +38,7 @@ app.post("/search", async (req, res) => {
 
     const generatedText = response.data.candidates[0].content.parts[0].text;
     // Render the result template with the output
-    res.render("results", { output: generatedText });
+    res.json({ output: generatedText });
   } catch (error) {
     console.error(error);
     res
@@ -65,7 +65,7 @@ app.post("/summarize", async (req, res) => {
 
     const generatedText = response.data.candidates[0].content.parts[0].text;
     // Render the result template with the output
-    res.render("results", { output: generatedText });
+    res.json({ output: generatedText });
   } catch (error) {
     console.error(error);
     res
